@@ -2,3 +2,5 @@ vendor/
 .idea/
 phpunit.xml
 composer.lock
+build/
+.phpunit.result.cache
