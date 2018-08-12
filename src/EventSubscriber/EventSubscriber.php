@@ -36,7 +36,7 @@ abstract class EventSubscriber implements EventSubscriberInterface
     /**
      * @param EventInterface $event
      */
-    public function subscribeTo(EventInterface $event)
+    private function subscribeTo(EventInterface $event)
     {
         $this->subscribedTo = get_class($event);
     }
@@ -58,9 +58,9 @@ abstract class EventSubscriber implements EventSubscriberInterface
      * @param EventInterface $event
      * @return bool
      */
-    protected function isSubscribedTo(EventInterface $event): bool
+    private function isSubscribedTo(EventInterface $event): bool
     {
-        return $this->subscribedTo === get_class($event);
+        return $this->subscribedTo == get_class($event);
     }
 
     /**
